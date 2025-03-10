@@ -1,0 +1,8 @@
+export enum CardBrands {
+    VISA = "VISA",
+    MASTERCARD = "MASTERCARD",
+    AMERICAN_EXPRESS = "AMERICAN EXPRESS",
+    ELO= "ELO",
+    HIPERCARD = "HIPERCARD"
+
+}

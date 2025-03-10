@@ -1,0 +1,12 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Instrument Sans', sans-serif !important;
+    text-align: justify;
+
+}
+
+span{
+    color: var(--azul-principal);
+    text-align: justify;
+}

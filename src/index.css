@@ -1,0 +1,18 @@
+#root {
+    --fonte-principal: 'Instrument Sans', sans-serif;
+
+    --azul-principal:#0A2B7B;
+    --azul-claro:#E8F7FF;
+    --cinza:#A8B0C3;
+    --cinza-escuro: #525C74;
+    --cinza-claro:#D9D9D9;
+
+
+    --headings-font-family: var(--fonte-principal);
+    --body-font-family: var(--fonte-principal);
+    --bs-body-font-family: var(--fonte-principal);
+    --bs-body-color: var(--azul-principal);
+    --bs-navbar-brand-color: var(--cinza);
+
+}
+
