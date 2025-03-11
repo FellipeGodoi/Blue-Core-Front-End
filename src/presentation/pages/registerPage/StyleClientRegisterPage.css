@@ -1,0 +1,18 @@
+.cad-text{
+    text-align: justify;
+}
+
+.equal-text{
+    color: red;
+}
+
+.pass-fraca{
+    color: red;
+}
+.pass-media{
+    color: var(--azul-principal);
+}
+
+.pass-forte{
+    color: green;
+}

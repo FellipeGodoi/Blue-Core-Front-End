@@ -20,7 +20,7 @@ export const createAddressService = async (address: Address, clientID: string) =
 
 export const updateAddressService = async (address: Address) => {
     try{
-        const url = `addresses/${address.id}`
+        const url = `address/${address.id}`
         const response = await AxiosClient.put(url, address);
 
         if (response.status === 200) {
@@ -36,7 +36,7 @@ export const updateAddressService = async (address: Address) => {
 
 export const deleteAddressService = async (address: Address) => {
     try{
-        const url = `addresses/${address.id}`
+        const url = `address/${address.id}`
         const response = await AxiosClient.delete(url);
 
         if (response.status === 204) {

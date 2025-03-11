@@ -19,7 +19,7 @@ export const createPhoneService = async (phone: Phone, cpf: string) => {
 
 export const updatePhoneService = async (phone: Phone) => {
     try {
-        const url = `phones/${phone.phoneId}`;
+        const url = `phone/${phone.phoneId}`;
         const response = await AxiosClient.put(url, phone);
 
         if (response.status === 200) {
@@ -35,7 +35,7 @@ export const updatePhoneService = async (phone: Phone) => {
 
 export const deletePhoneService = async (phone: Phone) => {
     try {
-        const url = `phones/${phone.phoneId}`;
+        const url = `phone/${phone.phoneId}`;
         const response = await AxiosClient.delete(url);
 
         if (response.status === 204) {

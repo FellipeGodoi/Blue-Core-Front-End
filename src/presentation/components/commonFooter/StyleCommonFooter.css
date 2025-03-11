@@ -1,0 +1,19 @@
+.footer{
+    background-image: url("../../../data/images/BlueCoreImages/Textura.png") ;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+}
+
+.footer-border{
+    background: var(--azul-principal)
+}
+
+.footer-text{
+    text-align: justify;
+    color: var(--azul-principal);
+}
+
+.footer-link{
+    color: var(--azul-principal);
+}

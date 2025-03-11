@@ -48,6 +48,7 @@ const PasswordField: React.FC<CampoSenhaProps> = ({
                 <button
                     type="button"
                     className="btn btn-outline-success"
+                    style={{ background: "var(--azul-principal)", border: "1px solid var(--azul-principal)", color: "white" }}
                     onClick={togglePasswordVisibility}
                 >
                     {isPasswordVisible ? "Ocultar" : "Mostrar"}

@@ -49,6 +49,7 @@ const PhoneModal: React.FC<PhoneModalProps> = ({ open, close, phone, cpf, onSave
             phonetype: tipoTelefone || TipoTelefone.CELULAR,
         });
 
+
         if (idPhone) {
             const updatedPhone = await updatePhoneService(newPhone);
             if (updatedPhone) {

@@ -10,3 +10,7 @@ span{
     color: var(--azul-principal);
     text-align: justify;
 }
+
+label{
+    color: var(--azul-principal);
+}
