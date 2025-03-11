@@ -1,10 +1,10 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-// import ClientRegisterPage from "../../presentation/pages/registerPages/clientRegisterPage/ClientRegisterPage.tsx";
 import ClientAdminPage from "../../presentation/pages/adminPages/clientsAdminPage/ClientAdminPage.tsx";
 import AdminHeader from "../../presentation/components/adminHeader/AdminHeader.tsx";
 import CommonHeader from "../../presentation/components/commonHeader/CommonHeader.tsx";
 import Footer from "../../presentation/components/commonFooter/Footer.tsx";
 import ClientRegisterPage from "../../presentation/pages/registerPage/ClientRegisterPage.tsx";
+import UserProfilePage from "../../presentation/pages/userProfilePage/UserProfilePage.tsx";
 
 //
 //
@@ -54,20 +54,22 @@ function AdminRoutes () {
 }
 
 // // ---------------- ROTAS DO PERFIL DO CLIENTE  ---------------------
-// function UserRoutes () {
-//     return(
-//         <>
-//             <CommonHeader/>
-//             <Routes>
-//                 <Route path="/profile/:cpf" element={<UserProfilePage/>}/>
-//             </Routes>
-//             <CommonFooter/>
-//         </>
-//     )
-// }
-//
-//
-//
+function UserRoutes () {
+    return(
+        <>
+            <CommonHeader/>
+            <section style={{ minHeight: "50vh", alignContent: "center" }}>
+                <Routes>
+                    <Route path=":cpfUrl" element={<UserProfilePage/>}/>
+                </Routes>
+            </section>
+            <Footer/>
+        </>
+    )
+}
+
+
+
 // // ---------------- GERENCIADOR DE ROTAS  ---------------------
 function AllRoutes () {
     return (
@@ -75,7 +77,7 @@ function AllRoutes () {
             <Routes>
                 <Route path="/*" element={<StoreRoutes/>}/>
                 <Route path="register/*" element={<RegisterRoutes/>}/>
-                {/*<Route path="perfil/*" element={<UserRoutes/>}/>*/}
+                <Route path="perfil/*" element={<UserRoutes/>} />
                 <Route path="admin/*" element={<AdminRoutes/>}/>
             </Routes>
         </Router>

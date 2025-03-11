@@ -11,6 +11,7 @@ import PasswordField from "../../components/inputs/PasswordField.tsx";
 import DateField from "../../components/inputs/DateInput.tsx";
 import EnumSelect from "../../components/inputs/EnumSelect.tsx";
 import {Button} from "react-bootstrap";
+import checkPasswordStrength from "../../../utils/functions/checkPasswordStrength.ts";
 
 export default function ClientRegisterPage(){
     const navigate = useNavigate();
@@ -29,25 +30,6 @@ export default function ClientRegisterPage(){
         setPasswordStrength(checkPasswordStrength(password));
     },[password]);
 
-    const checkPasswordStrength = (password: string): string => {
-        const lengthCriteria = password.length >= 8;
-        const numberCriteria = /\d/.test(password);
-        const lowercaseCriteria = /[a-z]/.test(password);
-        const uppercaseCriteria = /[A-Z]/.test(password);
-        const specialCharacterCriteria = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-
-        if (password === ""){
-            return ""
-        }else{
-            if (lengthCriteria && numberCriteria && lowercaseCriteria && uppercaseCriteria && specialCharacterCriteria) {
-                return "Forte";
-            } else if (lengthCriteria && (numberCriteria || lowercaseCriteria || uppercaseCriteria)) {
-                return "Média";
-            } else {
-                return "Fraca";
-            }
-        }
-    };
 
     const limpar = () => {
         setCpf("");
@@ -128,7 +110,6 @@ export default function ClientRegisterPage(){
                         <div className="gap-2 d-flex align-items-center">
                             <div className="col-8">
                                 <PasswordField id="password-confirm" label="Confirm sua senha" savePassword={setPassword2} password={password2} />
-
                             </div>
                             <div className="col-4 d-flex justify-content-center">
                                 {password !== password2 ? (
