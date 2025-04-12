@@ -5,6 +5,7 @@ import CommonHeader from "../../presentation/components/commonHeader/CommonHeade
 import Footer from "../../presentation/components/commonFooter/Footer.tsx";
 import ClientRegisterPage from "../../presentation/pages/registerPage/ClientRegisterPage.tsx";
 import UserProfilePage from "../../presentation/pages/userProfilePage/UserProfilePage.tsx";
+import UserHomePage from "../../presentation/pages/userHomePage/UserHomePage.tsx";
 
 //
 //
@@ -16,7 +17,7 @@ function StoreRoutes () {
             <CommonHeader/>
             <section style={{ minHeight: "80vh" }}>
                 <Routes>
-                    {/*<Route path="/" element={<UserHomePage/>}/>*/}
+                    <Route path="/" element={<UserHomePage/>}/>
                 </Routes>
             </section>
             <Footer/>

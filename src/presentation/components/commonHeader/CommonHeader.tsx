@@ -23,7 +23,6 @@ const CommonHeader = () => {
     return (
         <nav className="navbar navbar-expand-md shadow-sm px-5 d-flex justify-content-between mb-2">
             <div className="container">
-                {/* header pc */}
                 <div className="d-none d-md-flex justify-content-between w-100 align-items-center" >
                     <Link to="/">
                         <img

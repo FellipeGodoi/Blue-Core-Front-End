@@ -1,0 +1,33 @@
+.imageCardShop {
+    min-height: 120px;
+    max-height: 170px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.descontoCardProcessor{
+    color:white;
+    background-color:var(--azul-principal);
+}
+
+.modeloCardProcessor{
+    color: var(--azul-principal);
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3em;
+    line-height: 1.5em;
+}
+
+.precoOriginalCardProcessor{
+    color: var(--cinza-escuro);
+    text-decoration: line-through;
+}
+
+.precoCardProcessor{
+    color: var(--verde-escuro);
+    font-weight: bold;
+}
