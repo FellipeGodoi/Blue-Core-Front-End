@@ -6,6 +6,7 @@ import Footer from "../../presentation/components/commonFooter/Footer.tsx";
 import ClientRegisterPage from "../../presentation/pages/registerPage/ClientRegisterPage.tsx";
 import UserProfilePage from "../../presentation/pages/userProfilePage/UserProfilePage.tsx";
 import UserHomePage from "../../presentation/pages/userHomePage/UserHomePage.tsx";
+import ProductPage from "../../presentation/pages/productPage/ProductPage.tsx";
 
 //
 //
@@ -18,6 +19,7 @@ function StoreRoutes () {
             <section style={{ minHeight: "80vh" }}>
                 <Routes>
                     <Route path="/" element={<UserHomePage/>}/>
+                    <Route path="/produto/:code" element={<ProductPage/>}/>
                 </Routes>
             </section>
             <Footer/>

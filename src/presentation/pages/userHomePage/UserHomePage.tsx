@@ -28,7 +28,7 @@ export default function UserHomePage() {
         setGpuModel("");
         setHasIntegratedGrafics(null);
         setBrand("");
-        setSize(6)
+        setSize(9)
         setLimit(false)
     }
 
@@ -64,8 +64,8 @@ export default function UserHomePage() {
 
     return (
         <div>
-            <div className="container-lg d-flex justify-content-between gap-1 mb-3">
-                <div className="d-none d-md-flex justify-content-start col-3 border row">
+            <div className="container-lg d-flex justify-content-between gap-1 mt-lg-5 mb-3">
+                <div className="d-none d-md-flex justify-content-start col-3  row">
                     <div className="align-items-center">
                         <BrandFilter brand={brand} setBrand={(value) => setBrand(value)} />
                         <Button className="px-5 text-center" id="limparFiltros" onClick={limparFiltro} style={{
@@ -77,7 +77,7 @@ export default function UserHomePage() {
 
                     </div>
                 </div>
-                <div className="d-flex col-lg-9 justify-content-center border flex-wrap gap-md-3">
+                <div className="d-flex col-lg-9 justify-content-center  flex-wrap gap-md-3">
                     {produtos.length > 0 ? (
                         produtos.map((produto) => (
                             <ShopCardProcessor key={produto.codigo} processor={produto}/>
