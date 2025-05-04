@@ -7,6 +7,7 @@ import ClientRegisterPage from "../../presentation/pages/registerPage/ClientRegi
 import UserProfilePage from "../../presentation/pages/userProfilePage/UserProfilePage.tsx";
 import UserHomePage from "../../presentation/pages/userHomePage/UserHomePage.tsx";
 import ProductPage from "../../presentation/pages/productPage/ProductPage.tsx";
+import OrderAdminPage from "../../presentation/pages/adminPages/orderAdminPage/OrderAdminPage.tsx";
 
 //
 //
@@ -51,6 +52,7 @@ function AdminRoutes () {
             <AdminHeader/>
             <Routes>
                 <Route path="/clients" element={<ClientAdminPage/>}/>
+                <Route path="/orders" element={<OrderAdminPage/>}/>
             </Routes>
         </>
     )

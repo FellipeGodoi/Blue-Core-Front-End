@@ -12,6 +12,7 @@ import ryzen5 from "../../../data/images/productImages/Ryzen5.png";
 import ryzen7 from "../../../data/images/productImages/Ryzen7.png";
 import ryzen9 from "../../../data/images/productImages/Ryzen9.png";
 import {Container} from "react-bootstrap";
+import {addToCart} from "../../../utils/services/CartService.ts";
 
 
 const processorImages: { [key: string]: string } = {
@@ -45,6 +46,20 @@ export default function ProductPage() {
         }
         searchProduct();
     }, [code])
+
+    const [qtd, setQtd] = useState<number>(1);
+
+    const handleAdd = () => {
+        if (!processor?.id) {
+            alert("Produto inválido. ID não encontrado.");
+            return;
+        }
+
+        addToCart(
+            processor.id,
+            qtd,
+        );
+    };
 
 
     return (
@@ -86,7 +101,23 @@ export default function ProductPage() {
                         </div>
 
                         <div className="d-grid gap-2">
-                            <button className="btn btn-success">Adicionar ao carrinho</button>
+                            <div className="d-flex gap-4 align-items-center">
+                                <p>
+                                    Quantidade
+                                </p>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    value={qtd}
+                                    onChange={(e) => setQtd(Number(e.target.value))}
+                                    className="form-control mb-2"
+                                    placeholder="Quantidade"
+                                    style={{ textAlign: "center" }}
+                                />
+                            </div>
+                            <button className="btn btn-success" onClick={handleAdd}>
+                                Adicionar ao carrinho
+                            </button>
                             <button className="btn btn-success">Comprar</button>
                         </div>
                     </div>
